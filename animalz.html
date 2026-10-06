@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <style>
+    button {
+    margin-right: 20px;
+    }
+    #animalimg(
+    width: 100px;
+    }
+    </style>
+  </head>
+  <body>
+    <button id='catbtn'>Cat</button>
+    <button id='puppybtn'>Puppy</button>
+    <img id='animalimg'>
+    <p id='animalfact'></p>
+    <script>
+      document.getElementById('catbtn').addEventListener('click',function(){
+        document.getElementById('animalimg').src = 'cat.jpg';
+        document.getElementById('animalfact').textContent="cats are mysterious";
+      });
+       document.getElementById('puppybtn').addEventListener('click',function(){
+        document.getElementById('animalimg').src = 'puppy.jpg';
+        document.getElementById('animalfact').textContent="puppy are loyal";
+      });
+    </script>
+  </body>
+</html>
