@@ -1,13 +1,22 @@
 <html>
+  <head>
+    <style>
+      th, td{
+        border: 2px solid #0056b3;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
   <body>
    <table>
      <tr>
-       <th>Heading 1</th>
-       <th>heading 2</th>
+       <th>Item</th>
+       <th>Quantity</th>
+       <th>Action</th>
      </tr>
      <tr>
-       <td>chips</td> //data1
-       <td>Rs 50</td> //data2
+       <td>chips</td> 
+       <td>Rs 50</td> 
        <td>
          <button id="chips">Add Chips to cart</button>
        </td>
@@ -23,8 +32,8 @@
 
     <table>
       <tr>
-        <th>Chips</th>
-        <th>Apple</th>
+        <th>Item</th>
+        <th>Quantity</th>
       </tr>
       <tr>
         <td>Quantity of Chips</td>
@@ -39,7 +48,14 @@
     <script>
       let chips = 0;
       let apple = 0;
-      
+      document.getElementById('chips').addEventListener('click', function(){
+        chips++;
+        document.getElementById('quantchips').textContent = chips;
+      });
+      document.getElementById('apple').addEventListener('click', function(){
+        apple++;
+        document.getElementById('quantapples').textContent = apple;
+      });
     </script>
   </body>
 </html>
