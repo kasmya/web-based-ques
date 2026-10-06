@@ -14,8 +14,8 @@
     <span id="error"></span>
     <script>
       button = document.getElementById('savebtn');
-      button.addEventListener("click", function(){
-        const name = document.getElementById('user').value;
+      const button.addEventListener("click", function(){
+      const name = document.getElementById('user').value;
         if (name.length <3){
           document.getElementById('error').textContent = "Name should be of 3 characters";
         }
