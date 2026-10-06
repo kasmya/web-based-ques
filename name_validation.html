@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <style>
+      #background{
+        background-color: #28a745;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="user" type="text">
+    <input id="email" type="email">
+    <button id="savebtn">Save Changes</button>
+    <span id="error"></span>
+    <script>
+      button = document.getElementById('savebtn');
+      button.addEventListener("click", function(){
+        const name = document.getElementById('user').value;
+        if (name.length <3){
+          document.getElementById(name).textContent = "";
+        }
+      });
+    </script>
+  </body>
+</html>
