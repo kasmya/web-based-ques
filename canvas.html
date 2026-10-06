@@ -2,29 +2,28 @@
   <head>
     <style>
       #canvas {
-        border: 5 px solid;
+        border: 2px solid black;
       }
     </style>
   </head>
   <body>
-    <canvas id="canvas" width ="200" height ="400"></canvas>
+    <canvas id="canvas" width ="400" height ="400"></canvas>
     <br>
-    <button id="clear'>Clear</button>
+    <button id="clear">Clear</button>
 
     <script>
-      const canvas = document.getElementById('canvas')
-      const ctx = document.getContext("2d") //learn
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext("2d");
 
       canvas.addEventListener('click',function(e){
-      //learn
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left;
-      const y = e.clientY - rect.right;     
+      const y = e.clientY - rect.top;     
       ctx.fillRect(x, y, 30, 30);
-      }
+      });
 
       document.getElementById("clear").addEventListener("click", function() {
-      ctx.clearRect(0,0,canvas.width,canvas.height); //learn
+      ctx.clearRect(0,0,canvas.width,canvas.height); 
       });
 
     </script>
