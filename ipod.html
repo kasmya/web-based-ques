@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <style>
+      #ipod {
+      background-color: pink;
+      padding: 20px;
+      }
+    </style>
+  </head>
+  <div id='ipod'>
+  <button id='next'>Next</button>
+  <p id="text"></p>
+  </div>
+  <body>
+  <script>
+    document.getElementById('next').addEventListener('click',function(){
+      document.getElementById('text').textContent = 'Next';
+    });
+  </script>
+  </body>
+</html>
