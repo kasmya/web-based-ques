@@ -15,7 +15,7 @@
       search.value = "nana";
 
       function filterproducts(){
-        const filterval = searchinput.value.toLowerCase();
+        const filterval = search.value.toLowerCase();
         result.forEach(item=>{
           const dataname = item.getAttribute("data-name").toLowerCase();
           if (dataname.includes(filterval)){
