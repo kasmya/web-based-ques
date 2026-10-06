@@ -7,11 +7,24 @@
     </style>
   </head>
   <body>
+    
     <select>
-      <option value="cherry"></option>
+      <option value="cherry">Cherry</option>
+      <option value="apple">Apple</option>
     </select>
+    
+    <button id='btn'>Show Image</button>
+    <div id='imgContainer'></div>
+    
     <script>
-      
+      const button = document.getElementById("btn");
+      button.addEventListener("click, function(){
+        const fruit = document.getElementById("fruit").value;
+        document.getElementById("imgContainer").innerHTML = "";
+        const image= document.createElement("img");
+        image.src = fruit + ".jpg";
+        document.getElementById("imgContainer").appendChild("image");
+      });      
     </script>
   </body>
 </html>
