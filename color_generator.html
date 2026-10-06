@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+#box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<div id="box"></div>
+<p id="colorCode"></p>
+<button id="changeColor">
+    Change Color
+</button>
+
+<script>
+document.getElementById("changeColor").addEventListener("click", function() {
+
+        const color = "#" + Math.floor(Math.random() * 16777215).toString(16); //learn
+
+        document.getElementById("box").style.backgroundColor = color;
+
+        document.getElementById("colorCode").textContent = color;
+
+    });
+</script>
+
+</body>
+</html>
