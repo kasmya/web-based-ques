@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Fruit</title>
+  </head>
+  <body>
+    <input type="text" id="searchinput">
+    <ul class="fruit">
+      <li data-name="banana">Banana</li>
+      <li data-name="mango">Mango</li>
+      <li data-name="apple">Apple</li>
+    </ul>
+    <script>
+      const search=document.getElementById("searchinput");
+      const result=document.querySelectorAll(".fruit li");
+      search.value = "nana";
+
+      function filterproducts(){
+        const filterval = searchinput.value.toLowerCase();
+        result.forEach(item=>{
+          const dataname = item.getAttribute("data-name").toLowerCase();
+          if (dataname.includes(filterval)){
+              item.style.display="";
+              }
+          else{
+            item.style.display ="none";
+          }
+      })
+      }
+      filterproducts();
+      search.addEventListener('input',filterproducts);
+    </script>
+  </body>
+</html>
