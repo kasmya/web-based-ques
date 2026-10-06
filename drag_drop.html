@@ -1,0 +1,53 @@
+<html>
+<head>
+<style>
+
+#container {
+    width: 400px;
+    height: 250px;
+    border: 2px solid black;
+    position: relative;
+}
+
+#box {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+    <div id="box"></div>
+</div>
+
+<script>
+
+const box =document.getElementById("box");
+const container =document.getElementById("container");
+
+let dragging = false;
+
+box.addEventListener("mousedown", function() {
+    dragging = true;
+});
+
+document.addEventListener("mouseup", function() {
+    dragging = false;
+});
+
+container.addEventListener("mousemove", function(e) {
+    if (dragging) {
+        box.style.left = e.offsetX + "px";
+        box.style.top = e.offsetY + "px";
+    }
+});
+
+</script>
+
+</body>
+</html>
